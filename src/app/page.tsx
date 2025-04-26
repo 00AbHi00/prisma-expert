@@ -1,39 +1,29 @@
-"use client"
-import { useState, useEffect } from 'react'
+"use client";
+import { useEffect } from "react";
 
-const SearchUsers = () => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [users, setUsers] = useState<any[]>([])
-
-  const handleSearch = async () => {
-    const response = await fetch(`/api/users?search=${searchTerm}`)
-    const data = await response.json()
-    setUsers(data.existingUsers)
-  }
-
-  useEffect(() => {
-    if (searchTerm === '') {
-      setUsers([])
-    }
-  }, [searchTerm])
-
+const Home = () => {
   return (
-    <div>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search users"
-      />
-      <button onClick={handleSearch}>Search</button>
-
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>{user.userName} - {user.email}</li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
-export default SearchUsers
+    <>
+      <form className="flex p-3 bg-primary justify-center gap-3 ">
+        <input
+        className=" 
+          border
+         border-red-100
+         rounded-sm
+         bg-amber-600 
+         "
+        type="search" />
+        <input
+          className="bg-red-500
+           p-2
+           hover:bg-red-800
+           cursor-pointer
+           rounded-sm shadow-md shadow-rose-500"
+          value={"Submit"}
+          type="submit"
+        />
+      </form>
+    </>
+  );
+};
+export default Home;

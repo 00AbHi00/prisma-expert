@@ -4,6 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Color Schemes in light */
+  --color-1:#FFEDFA;
+  --color-2:#FFB8E0;
+  --color-3:#EC7FA9;
+  --color-4:#BE5985;
+
   --primary:oklch(0.208 0.042 265.755);
   --radius:0.625rem;
   --background:oklch(1 0 0);
@@ -38,12 +44,10 @@
   --sidebar-ring:oklch(0.704 0.04 256.788);
 }
 
-[data-theme='dark']
-{
-  --primary:pink;
-}
 
 @theme inline {
+  
+
   --color-primary:var(--primary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -90,6 +94,11 @@
 }
 
 .dark {
+  --color-1:#A64D79;
+  --color-2:#6A1E55;
+  --color-3:#3B1C32;
+  --color-4:#1A1A1D;
+
   --background:oklch(0.129 0.042 264.695);
   --foreground:oklch(0.984 0.003 247.858);
   --card:oklch(0.208 0.042 265.755);

@@ -5,12 +5,12 @@ export const Header = () => {
       {/* Header Section,
       in this theme can be toggled, 
     */}
-      <nav className=" w-screen p-3 flex justify-around">
+      <nav className="w-screen p-3 flex justify-around ">
         <div className="flex gap-3 p-1">
-          <span className="outline p-2 rounded-sm hover:bg-">Home</span>
-          <span>Users</span>
-          <span>Contact</span>
-          <span>Main</span>
+          <span className="outline p-2 rounded-sm hover:bg-accent ">Home</span>
+          <span className="outline p-2 rounded-sm hover:bg-accent ">Users</span>
+          <span className="outline p-2 rounded-sm hover:bg-accent ">Contact</span>
+          <span className="outline p-2 rounded-sm hover:bg-accent ">Main</span>
         </div>
         <ThemeToggle />
       </nav>
